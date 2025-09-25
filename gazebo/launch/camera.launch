@@ -6,7 +6,7 @@
   <arg name="gui" default="true"/>
   <arg name="headless" default="false"/>
   <arg name="debug" default="false"/>
-  <arg name="namespace" default="/gp4_gazebo/"/>
+  <arg name="namespace" default="gp4_gazebo"/>
   <arg name="launch_world" default="true"/>
   <arg name="x" default="0"/>
   <arg name="y" default="0"/>
