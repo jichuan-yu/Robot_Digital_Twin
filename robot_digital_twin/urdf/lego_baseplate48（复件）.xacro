@@ -13,7 +13,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <mass
-        value="1" />
+        value="0.001" />
       <inertia
         ixx="0"
         ixy="-0.0"
@@ -36,12 +36,15 @@
           rgba="1 1 1 1" />
       </material>
     </visual>
-    <collision>
-      <origin xyz="0 0 -0.0025" rpy="0 0 0"/>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
       <geometry>
-         <box size="0.48 0.48 0.005"/> 
+        <mesh scale="${scale} ${scale} ${scale}"
+          filename="file://$(find robot_digital_twin)/meshes/lego/base32x32.stl"/>
       </geometry>
-    </collision>
+    </collision> -->
     <gravity>0</gravity>
   </link>
   

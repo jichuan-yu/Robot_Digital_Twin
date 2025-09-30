@@ -12,14 +12,14 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <mass
-        value="0.001" />
+        value="0.01" />
       <inertia
-        ixx="0"
+        ixx="0.0001"
         ixy="-0.0"
         ixz="0.0"
-        iyy="0.0"
+        iyy="0.0001"
         iyz="0.0"
-        izz="0.0" />
+        izz="0.0001" />
     </inertial>
     <visual>
       <origin
@@ -35,7 +35,7 @@
           rgba="1 1 1 1" />
       </material>
     </visual>
-    <!-- <collision>
+    <collision>
       <origin
         xyz="0 0 0"
         rpy="0 0 ${pi/2}" />
@@ -43,13 +43,13 @@
         <mesh scale="${scale} ${scale} ${scale}"
           filename="file://$(find robot_digital_twin)/meshes/lego/b2x4.stl"/>
       </geometry>
-    </collision> -->
-    <gravity>0</gravity>
+    </collision> 
+    <gravity>0</gravity> 
   </link>
   
 
   <gazebo reference="brick">
-  <kinematic>true</kinematic>
+  <!-- <kinematic>true</kinematic> -->
   <xacro:if value="${color == 'Orange'}">
      <material>Gazebo/Orange</material>
     </xacro:if>
