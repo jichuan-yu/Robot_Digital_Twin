@@ -83,12 +83,12 @@
         file="$(find robot_digital_twin)/launch/camera.launch">
         <arg name="namespace" value="/camera1/"/>
         <arg name="launch_world" value="false"/>
-        <arg name="x" value="0"/>
-        <arg name="y" value="0.25"/>
-        <arg name="z" value="1.6"/>
+        <arg name="x" value="0.4"/>
+        <arg name="y" value="0.5"/>
+        <arg name="z" value="1.2"/>
         <arg name="roll" value="0"/>
-        <arg name="pitch" value="1.05"/>
-        <arg name="yaw" value="0.0"/>
+        <arg name="pitch" value="0.0"/>
+        <arg name="yaw" value="-1.58"/>
     </include> 
 
     <!-- <include
