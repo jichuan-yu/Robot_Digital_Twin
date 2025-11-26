@@ -41,4 +41,6 @@
   <!-- not an official colour, but used in some old xacro:macros -->
   <xacro:property name="color_yaskawa_silver" value="0.8 0.8 0.8 1"/>
 
+  <xacro:property name="color_copper_red" value="${227/255} ${23/255} ${13/255} 1.0"/>
+
 </robot>

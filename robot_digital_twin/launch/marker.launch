@@ -1,0 +1,18 @@
+<launch>
+    <arg name="color" default="Red"/>
+
+    <arg name = "name" default="marker"/>
+    <param name="marker_description" command="$(find xacro)/xacro --inorder $(find robot_digital_twin)/urdf/lego_1x2_marker.xacro 
+                                                    brick_color:=$(arg color)"/>
+    <node name="spawn_marker" pkg="gazebo_ros" type="spawn_model"
+      args="-param marker_description
+            -urdf 
+            -x 0
+            -y 0
+            -z 0.0112
+            -model $(arg name)"
+      respawn="false" output="screen">
+    </node>    
+
+
+</launch>

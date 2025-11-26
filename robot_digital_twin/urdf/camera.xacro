@@ -87,13 +87,14 @@
 
 
   <gazebo reference="link_camera_origin">
-  <sensor name="$depth_camera" type="depth">
+  <!-- <sensor name="$depth_camera" type="depth">  -->
+  <sensor name="$depth_camera" type="camera"> 
     <update_rate>15</update_rate>
     <camera>
       <horizontal_fov>1.39626340156</horizontal_fov> <!-- 80deg -->
       <image>
-        <width>1920</width>
-        <height>1080</height>
+        <width>1280</width>
+        <height>720</height>
         <format>R8G8B8</format>
       </image>
       <clip>
@@ -101,7 +102,11 @@
         <far>2</far>
       </clip>
     </camera>
-    <plugin name="$depth_camera_controller" filename="libgazebo_ros_openni_kinect.so">
+    <plugin name="rgb_camera_controller" filename="libgazebo_ros_camera.so">
+      <cameraName>fixed_camera</cameraName>
+      <frameName>depth_camera_link</frameName>
+    </plugin>
+    <!-- <plugin name="$depth_camera_controller" filename="libgazebo_ros_openni_kinect.so">
       <baseline>0.2</baseline>
       <alwaysOn>true</alwaysOn>
       <updateRate>0</updateRate>
@@ -119,7 +124,7 @@
       <Cy>0</Cy>
       <focalLength>0</focalLength>
       <hackBaseline>0</hackBaseline>
-    </plugin>
+    </plugin> -->
   </sensor>
 </gazebo>
 

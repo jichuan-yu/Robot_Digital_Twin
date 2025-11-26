@@ -257,6 +257,7 @@
           <geometry>
             <mesh filename="file://$(find robot_digital_twin)/meshes/eoat/tool_D405.stl"/>
           </geometry>
+          <xacro:tool_material_copper_red/>
         </visual>
         <!-- <collision>
           <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -408,7 +409,7 @@
                         color_width="1280"
                         color_height="720"
                         color_fps="15"
-                        enable_pointCloud="true"
+                        enable_pointCloud="false"
                         depth_width="1280"
                         depth_height="720"
                         depth_fps="30" > 
@@ -423,7 +424,7 @@
                         color_width="1280"
                         color_height="720"
                         color_fps="15"
-                        enable_pointCloud="true"
+                        enable_pointCloud="false"
                         depth_width="1280"
                         depth_height="720"
                         depth_fps="30" > 
@@ -464,7 +465,7 @@
     <visual> <transparency> 0 </transparency> </visual>
   </gazebo>
   <gazebo reference="link_tool">
-     <material>Gazebo/Black</material>
+    <material>Gazebo/Orange</material>
     <visual> <transparency> 0 </transparency> </visual>
   </gazebo> 
   <gazebo reference="fts">

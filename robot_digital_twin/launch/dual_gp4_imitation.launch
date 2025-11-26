@@ -5,7 +5,7 @@
     <arg name="gui" default="true"/>
     <arg name="headless" default="false"/>
     <arg name="debug" default="false"/>
-    <arg name="env" default="vis_lego"/>
+    <arg name="env" default="physics_lego"/>
     <arg name="num_b2" default="0"/> 
     <arg name="num_b3" default="0"/> 
     <arg name="num_b4" default="0"/> 
@@ -45,7 +45,7 @@
     </include>
 
     <include
-        file="$(find robot_digital_twin)/launch/env.launch">
+        file="$(find robot_digital_twin)/launch/env_with_plugin.launch">
         <arg name="launch_world" value="true"/>
         <arg name="x" value="0"/>
         <arg name="y" value="0"/>
@@ -83,15 +83,15 @@
         file="$(find robot_digital_twin)/launch/camera.launch">
         <arg name="namespace" value="/camera1/"/>
         <arg name="launch_world" value="false"/>
-        <arg name="x" value="-0.22457"/>
-        <arg name="y" value="-0.50733"/>
-        <arg name="z" value="1.250"/>
+        <arg name="x" value="0"/>
+        <arg name="y" value="0.25"/>
+        <arg name="z" value="1.6"/>
         <arg name="roll" value="0"/>
-        <arg name="pitch" value="0.17"/>
-        <arg name="yaw" value="0.65"/>
-    </include>
+        <arg name="pitch" value="1.05"/>
+        <arg name="yaw" value="0.0"/>
+    </include> 
 
-    <include
+    <!-- <include
         file="$(find robot_digital_twin)/launch/camera.launch">
         <arg name="namespace" value="/camera2/"/>
         <arg name="launch_world" value="false"/>
@@ -101,5 +101,5 @@
         <arg name="roll" value="0"/>
         <arg name="pitch" value="0.17"/>
         <arg name="yaw" value="-2.5415926"/>
-    </include>
+    </include> -->
 </launch>
